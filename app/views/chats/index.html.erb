@@ -1,0 +1,11 @@
+<div>チャット画面</div>
+<%= form_with url:'chats', method: :post, local: true do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '送信' %>
+<% end %>
+
+<% @chats.each do |chat|%>
+  <div>
+    <%= chat.content %>
+  </div>
+<% end %>
