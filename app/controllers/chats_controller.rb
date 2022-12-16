@@ -7,6 +7,9 @@ class ChatsController < ApplicationController
   end
 
   def create
-    Chat.create(content: params[:content])
+    if  Chat.create(content: params[:content])
+      Chat.create(content: "こんばんは")
+    end
+    redirect_to root_path
   end
 end
