@@ -3,6 +3,7 @@ class CreateChats < ActiveRecord::Migration[6.0]
     create_table :chats do |t|
       t.text :content , null: false
       t.timestamps
+      t.string :nickname ,null: false
     end
   end
 end
