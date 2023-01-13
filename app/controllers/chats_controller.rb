@@ -7,9 +7,9 @@ class ChatsController < ApplicationController
   end
 
   def create
-    if  params[:content].match(/こんにちは/)
+    if  params[:content].match(/%おはよう%||%こんにちは%||%こんばんは%/)
       Chat.create(content: params[:content])
-      Chat.create(content: "こんばんは")
+      Chat.create(content: "おはようございます")
     end
     redirect_to root_path
   end
